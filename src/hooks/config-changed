@@ -1,0 +1,15 @@
+#!/bin/bash
+# config-changed occurs everytime a new configuration value is updated (juju set)
+
+servers=$(config-get servers)
+
+cp templates/chrony.conf /etc/chrony.conf
+
+# inject servers at top of the static file
+for server in $servers; do
+  sed -i "1s/^/server $server iburst\n/" /etc/chrony.conf
+done
+
+systemctl reload-or-restart chronyd
+
+status-set active "Ready"

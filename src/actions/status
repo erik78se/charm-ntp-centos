@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# tracking
+chronyc tracking
+
+# sources
+chronyc sources

@@ -1,0 +1,14 @@
+name: ntp-centos
+summary: A minimal chrony ntp for centos
+maintainer: Erik <erik.lonroth@scania.com>
+description: |
+  Enables and starts chrony using configured servers.
+tags:
+  - centos
+series:
+  - centos7
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true

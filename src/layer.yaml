@@ -1,0 +1,3 @@
+includes:
+  - interface:juju-info
+repo: https://hpc.git

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -x /bin/chronyc ]; then
+   status-set active "chrony: Ready"
+else
+   status-set active "chrony: Not installed"
+fi
