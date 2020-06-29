@@ -7,6 +7,9 @@ This charm doesn't strictly need building since its a bash only charm.
 But to be sure:
 
 <pre>
-~/allcode/hpc$ charm build ./src --build-dir=builds 
+make build
 </pre>
 
+
+# Local deply
+juju deploy ./builds/ntp-centos
